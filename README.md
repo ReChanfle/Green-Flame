@@ -2,30 +2,77 @@
 
 
 
-Instrucciones para inicializar el proyecto localmente:
-- Gestor de paquetes-> Composer.
-- Entorno de desarrollo local (WAMP) Laragon o parecido.
-- PHP v8.2.6.
-- Version de Laravel utilizada v8.83.27.
 
-1er: clonar el repositorio (git clone)
-2do: con la terminal de VS u otra, ejecutar el comando ('composer i') en la carpera raiz del proyecto para instalar las dependencias.
-3er: crear archivo .env con los siguientes valores:
 
+
+Instrucciones para Inicializar el Proyecto Localmente
+Requisitos Previos
+Asegúrate de tener los siguientes requisitos previos instalados en tu sistema:
+
+Gestor de Paquetes: Composer
+Entorno de Desarrollo Local: WAMP, Laragon u otro similar
+PHP: Versión 8.2.6 o superior
+Laravel: Versión 8.83.27
+Pasos para Inicializar el Proyecto
+Paso 1: Clonar el Repositorio
+Clona el repositorio desde Git usando el siguiente comando en tu terminal:
+
+bash
+Copy code
+git clone <URL_del_repositorio>
+Paso 2: Instalar Dependencias
+En la carpeta raíz del proyecto, ejecuta el siguiente comando para instalar las dependencias de Composer:
+
+bash
+Copy code
+composer install
+Paso 3: Configurar el Archivo .env
+Crea un archivo .env en la raíz del proyecto y configúralo con la información de tu base de datos. Aquí tienes un ejemplo:
+
+env
+Copy code
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=green_flame
 DB_USERNAME=root
 DB_PASSWORD=
+Paso 4: Crear la Base de Datos
+Usando tu entorno local (como Laragon), crea una base de datos con el nombre especificado en el archivo .env (DB_DATABASE=green_flame) y asegúrate de utilizar el mismo puerto.
 
-4to: En Laragon crear la db con el nombre indicado en el archivo .env-> DB_DATABASE=green_flame y tambien utilizar el mismo puerto.
-5to: 
-6to : Ejecutar las migraciones para crear las tablas desde Laravel, con el siguiente comando-> 'php artisan migrate', pero se podria tirar un status por las dudas -> php artisan migrate:status, para chequear el estado de las migraciones.
-7mo: se populan las tablas con el SQL provisto en el zip ->database_data.SQL, igualmente se puede encontar en la rama master en este mismo repo. Para popular las tablas, desde Laragon->database->Session manager->Crear sesion(port 3306, se elige la tabla anteriormente creada)-> open->sobre la carpeta, se busca el archivo atabase_data.SQL y con el boton play se corre el query. IMPORTANTE!! si este paso no es bien ejecutado no se van apoder ejecutar los seeder
-8vo: Ahora ya se puede proceder a correr los seeder con el comando->php artisan db:seed para popular la tabla con el usuario por defecto y algunos registros para testear el ABM.
-9no: Ultimo comando para levnatar el proyecto localmente php artisan serve. GUALAA!!.
+Paso 5: Ejecutar Migraciones
+Ejecuta las migraciones de Laravel para crear las tablas de la base de datos con el siguiente comando:
 
-URL por defecto: http://localhost:8000/
+bash
+Copy code
+php artisan migrate
+También puedes verificar el estado de las migraciones con:
+
+bash
+Copy code
+php artisan migrate:status
+Paso 6: Popular las Tablas
+Para poblar las tablas con datos iniciales, utiliza el archivo database_data.SQL. En Laragon, puedes hacerlo de la siguiente manera:
+
+Abre Laragon.
+Navega a "Database" y crea una sesión (puerto 3306) usando el mismo nombre de base de datos (green_flame) que especificaste en el archivo .env.
+Abre la sesión recién creada y ejecuta el archivo database_data.SQL usando el botón "play". Esto llenará las tablas con datos de prueba.
+Nota Importante: Si este paso no se realiza correctamente, los seeders no funcionarán correctamente.
+
+Paso 7: Ejecutar Seeders
+Popula la tabla con usuarios por defecto y otros registros de prueba utilizando el siguiente comando:
+
+bash
+Copy code
+php artisan db:seed
+Paso 8: Levantar el Servidor Local
+Finalmente, inicia el servidor local con el siguiente comando:
+
+bash
+Copy code
+php artisan serve
+¡Listo! Ahora puedes acceder a tu proyecto localmente en http://localhost:8000/.
+
+Estas instrucciones proporcionan una guía detallada para configurar y ejecutar el proyecto Laravel en tu entorno local. Asegúrate de seguir estos pasos cuidadosamente para evitar problemas durante la configuración inicial. ¡Buena suerte con tu proyecto!
 
 
