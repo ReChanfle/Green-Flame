@@ -22,7 +22,8 @@
 Clona el repositorio desde Git usando el siguiente comando en tu terminal:
 
 ```
-git clone <URL_del_repositorio>
+git clone [<URL_del_repositorio>](https://github.com/ReChanfle/Green-Flame.git
+)
 ```
 
 ### Paso 2: Instalar Dependencias
