@@ -92,6 +92,13 @@ php artisan serve
 ```
 ¡Listo! Ahora puedes acceder a tu proyecto localmente en http://localhost:8000/.
 
+Datos de logueo:
+
+```
+user: admin@example.com
+password: password
+```
+
 
 
    
