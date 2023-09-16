@@ -24,53 +24,62 @@ Clona el repositorio desde Git usando el siguiente comando en tu terminal:
 ```bash
 git clone <URL_del_repositorio>
 
+### Paso 2: Instalar Dependencias
 
-   
-    <p>Clona el repositorio desde Git usando el siguiente comando en tu terminal:</p>
-    <code>git clone &lt;URL_del_repositorio&gt;</code>
+En la carpeta raíz del proyecto, ejecuta el siguiente comando para instalar las dependencias de Composer:
 
-    <h3>Paso 2: Instalar Dependencias</h3>
-    <p>En la carpeta raíz del proyecto, ejecuta el siguiente comando para instalar las dependencias de Composer:</p>
-    <code>composer install</code>
+```bash
+composer install
 
-    <h3>Paso 3: Configurar el Archivo .env</h3>
-    <p>Crea un archivo <code>.env</code> en la raíz del proyecto y configúralo con la información de tu base de datos. Aquí tienes un ejemplo:</p>
-    <pre>
+### Paso 3: Configurar el Archivo .env
+
+Crea un archivo .env en la raíz del proyecto y configúralo con la información de tu base de datos. Aquí tienes un ejemplo:
+
+
+```plaintext
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=green_flame
 DB_USERNAME=root
 DB_PASSWORD=
-    </pre>
 
-    <h3>Paso 4: Crear la Base de Datos</h3>
-    <p>Usando tu entorno local (como Laragon), crea una base de datos con el nombre especificado en el archivo <code>.env</code> (<code>DB_DATABASE=green_flame</code>) y asegúrate de utilizar el mismo puerto.</p>
+### Paso 4: Crear la Base de Datos
+Usando tu entorno local (como Laragon), crea una base de datos con el nombre especificado en el archivo .env (DB_DATABASE=green_flame) y asegúrate de utilizar el mismo puerto.
 
-    <h3>Paso 5: Ejecutar Migraciones</h3>
-    <p>Ejecuta las migraciones de Laravel para crear las tablas de la base de datos con el siguiente comando:</p>
-    <code>php artisan migrate</code>
-    <p>También puedes verificar el estado de las migraciones con:</p>
-    <code>php artisan migrate:status</code>
+### Paso 5: Ejecutar Migraciones
+Ejecuta las migraciones de Laravel para crear las tablas de la base de datos con el siguiente comando:
 
-    <h3>Paso 6: Popular las Tablas</h3>
-    <p>Para poblar las tablas con datos iniciales, utiliza el archivo <code>database_data.SQL</code>. En Laragon, puedes hacerlo de la siguiente manera:</p>
-    <ul>
-        <li>Abre Laragon.</li>
-        <li>Navega a "Database" y crea una sesión (puerto 3306) usando el mismo nombre de base de datos (<code>green_flame</code>) que especificaste en el archivo <code>.env</code>.</li>
-        <li>Abre la sesión recién creada y ejecuta el archivo <code>database_data.SQL</code> usando el botón "play". Esto llenará las tablas con datos de prueba.</li>
-    </ul>
-    <p><strong>Nota Importante:</strong> Si este paso no se realiza correctamente, los seeders no funcionarán correctamente.</p>
+```bash
+php artisan migrate
 
-    <h3>Paso 7: Ejecutar Seeders</h3>
-    <p>Popula la tabla con usuarios por defecto y otros registros de prueba utilizando el siguiente comando:</p>
-    <code>php artisan db:seed</code>
+También puedes verificar el estado de las migraciones con:
 
-    <h3>Paso 8: Levantar el Servidor Local</h3>
-    <p>Finalmente, inicia el servidor local con el siguiente comando:</p>
-    <code>php artisan serve</code>
+```bash
+php artisan migrate:status
 
-    <p>¡Listo! Ahora puedes acceder a tu proyecto localmente en <a href="http://localhost:8000/">http://localhost:8000/</a>.</p>
+### Paso 6: Popular las Tablas
+Para poblar las tablas con datos iniciales, utiliza el archivo database_data.SQL. En Laragon, puedes hacerlo de la siguiente manera:
+
+Abre Laragon.
+Navega a "Database" y crea una sesión (puerto 3306) usando el mismo nombre de base de datos (green_flame) que especificaste en el archivo .env.
+Abre la sesión recién creada y ejecuta el archivo database_data.SQL usando el botón "play". Esto llenará las tablas con datos de prueba.
+Nota Importante: Si este paso no se realiza correctamente, los seeders no funcionarán correctamente.
+
+### Paso 7: Ejecutar Seeders
+Popula la tabla con usuarios por defecto y otros registros de prueba utilizando el siguiente comando:
+
+```bash
+php artisan db:seed
+
+### Paso 8: Levantar el Servidor Local
+Finalmente, inicia el servidor local con el siguiente comando:
+
+```bash
+php artisan serve
+
+¡Listo! Ahora puedes acceder a tu proyecto localmente en http://localhost:8000/.
 
 
 
+   
