@@ -100,7 +100,7 @@ password: password
 ```
 
 ### PD:
-El proyecto carece de ordenamiento, si posee filtros, pero no ordenamiento como se exije, todas las demas funcionalidades  estan aplicadas. Lo entrego antes de tiempo ya que mañana Sabado, tengo que hacer un trabajo no oficial. Muchas Gracias!, estoy a disposicion.
+El proyecto carece de ordenamiento, si posee filtros, pero no ordenamiento como se exije, todas las demas funcionalidades estan aplicadas(incluso la de exportacion de csv :)). Lo entrego antes de tiempo ya que mañana Sabado, tengo que hacer un trabajo no oficial. Muchas Gracias!, estoy a disposicion.
 
 ### Saludos cordiales!!.
 
