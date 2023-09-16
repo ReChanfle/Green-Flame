@@ -29,9 +29,19 @@ git clone <URL_del_repositorio>
 
 En la carpeta raíz del proyecto, ejecuta el siguiente comando para instalar las dependencias de Composer:
 
+
+
+
+
 ```
 composer install
 ```
+
+
+
+
+
+
 ### Paso 3: Configurar el Archivo .env
 
 Crea un archivo .env en la raíz del proyecto y configúralo con la información de tu base de datos. Aquí tienes un ejemplo:
