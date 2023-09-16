@@ -21,43 +21,44 @@
 
 Clona el repositorio desde Git usando el siguiente comando en tu terminal:
 
-bash
+```
 git clone <URL_del_repositorio>
+```
 
 ### Paso 2: Instalar Dependencias
 
 En la carpeta raíz del proyecto, ejecuta el siguiente comando para instalar las dependencias de Composer:
 
-bash
+```
 composer install
-
+```
 ### Paso 3: Configurar el Archivo .env
 
 Crea un archivo .env en la raíz del proyecto y configúralo con la información de tu base de datos. Aquí tienes un ejemplo:
 
+```
 
-plaintext
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=green_flame
 DB_USERNAME=root
 DB_PASSWORD=
-
+```
 ### Paso 4: Crear la Base de Datos
 Usando tu entorno local (como Laragon), crea una base de datos con el nombre especificado en el archivo .env (DB_DATABASE=green_flame) y asegúrate de utilizar el mismo puerto.
 
 ### Paso 5: Ejecutar Migraciones
 Ejecuta las migraciones de Laravel para crear las tablas de la base de datos con el siguiente comando:
 
-bash
+```
 php artisan migrate
-
+```
 También puedes verificar el estado de las migraciones con:
 
-bash
+```
 php artisan migrate:status
-
+```
 ### Paso 6: Popular las Tablas
 Para poblar las tablas con datos iniciales, utiliza el archivo database_data.SQL. En Laragon, puedes hacerlo de la siguiente manera:
 
@@ -69,15 +70,15 @@ Nota Importante: Si este paso no se realiza correctamente, los seeders no funcio
 ### Paso 7: Ejecutar Seeders
 Popula la tabla con usuarios por defecto y otros registros de prueba utilizando el siguiente comando:
 
-bash
+```
 php artisan db:seed
-
+```
 ### Paso 8: Levantar el Servidor Local
 Finalmente, inicia el servidor local con el siguiente comando:
 
-bash
+```
 php artisan serve
-
+```
 ¡Listo! Ahora puedes acceder a tu proyecto localmente en http://localhost:8000/.
 
 
