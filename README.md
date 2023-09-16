@@ -6,19 +6,26 @@
 
 
 
-    <h1>Instrucciones para Inicializar el Proyecto Localmente</h1>
+   # Instrucciones para Inicializar el Proyecto Localmente
 
-    <h2>Requisitos Previos</h2>
-    <ul>
-        <li>Gestor de Paquetes: Composer</li>
-        <li>Entorno de Desarrollo Local: WAMP, Laragon u otro similar</li>
-        <li>PHP: Versión 8.2.6 o superior</li>
-        <li>Laravel: Versión 8.83.27</li>
-    </ul>
+## Requisitos Previos
 
-    <h2>Pasos para Inicializar el Proyecto</h2>
+- Gestor de Paquetes: Composer
+- Entorno de Desarrollo Local: WAMP, Laragon u otro similar
+- PHP: Versión 8.2.6 o superior
+- Laravel: Versión 8.83.27
 
-    <h3>Paso 1: Clonar el Repositorio</h3>
+## Pasos para Inicializar el Proyecto
+
+### Paso 1: Clonar el Repositorio
+
+Clona el repositorio desde Git usando el siguiente comando en tu terminal:
+
+```bash
+git clone <URL_del_repositorio>
+
+
+   
     <p>Clona el repositorio desde Git usando el siguiente comando en tu terminal:</p>
     <code>git clone &lt;URL_del_repositorio&gt;</code>
 
